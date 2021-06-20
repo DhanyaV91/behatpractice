@@ -1,0 +1,19 @@
+#behat.yml
+default:
+  suites:
+    default:
+      paths:
+        features: features
+        bootstrap: 'features/bootstrap'
+      contexts:
+        - Behat\MinkExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      default_session: selenium2
+      base_url: http://autopract.com
+      sessions:
+        javascript:
+          selenium2:
+            browser: firefox
+            wd_host: http://localhost:4444/wd/hub
